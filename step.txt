@@ -1,0 +1,8 @@
+1 - php artisan make:command cronEmail
+2  - Open
+2.1 - app/console/commands/cronEmail
+3 - public function handle ()
+{
+    write email send code
+}
+4 - php artisan make:mail Remeber --markdown=emails.texte

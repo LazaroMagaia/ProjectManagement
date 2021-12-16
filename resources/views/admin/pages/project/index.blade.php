@@ -42,7 +42,7 @@
                                                     <td class="text-bold-500">{{$project->name}}</td>
                                                     <td>{{$project->method}}</td>
                                                     <td class="text-bold-500">
-                                                        {{'MZN '.number_format($project->price, 2, ',', '.')}}
+                                                        {{number_format($project->price, 2, ',', '.').' MZN '}}
                                                         </td>
                                                     <td>
                                                         {{ date('d/m/Y', strtotime($project->start_project))."-".date('d/m/Y', strtotime($project->done_project))}}
@@ -53,9 +53,11 @@
                                                         </span>
                                                     </td>
                                                     <td>
-                                                        <a href="" class="btn btn-info">Ver</a>
-                                                        <a href="{{route('project.edit',$project->id)}}" class="btn btn-warning">Editar</a>
-                                                       <a href="" class="btn btn-danger">Remover</a> 
+                                                        <a href="{{route('project.show',$project->id)}}" class="btn btn-info">
+                                                            <i class="bi bi-eye"></i></a>
+                                                        <a href="{{route('project.edit',$project->id)}}" 
+                                                        class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                                                        <a href="" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                                                     </td>
                                                 </tr>   
                                                 @endforeach

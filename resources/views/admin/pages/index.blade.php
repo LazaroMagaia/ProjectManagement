@@ -12,22 +12,31 @@
         <h3>Painel de controle</h3>
     </div>
     <div class="page-content">
+
         <section class="row">
            <div class="col-12 p-3">
                 <div class="card-project">
-                    @for ($i = 0; $i < 3; $i++)
                     <div class="card-project-single">
                         <div>
-                            <p>150</p>
+                            <p>{{$projectsON}}</p>
                             <span>Projectos concluidos</span>
                         </div>
                         <div>
                             <i class="bi bi-bookmark-check-fill"></i>
                         </div>
                     </div><!--card-project-single-->
-                    @endfor
 
-                </div><!--col-sm-->
+                    <div class="card-project-single">
+                        <div>
+                            <p>{{$projectsOFF}}</p>
+                            <span>Projectos não concluidos</span>
+                        </div>
+                        <div>
+                            <i class="bi bi-bookmark-x-fill"></i>
+                        </div>
+                    </div><!--card-project-single-->
+
+                </div><!--card-project-->
            </div><!--col-->
         </section>
     </div><!--page content-->

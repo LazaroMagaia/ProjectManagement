@@ -23,6 +23,7 @@
                             <div class="card-body">
                                 <form class="form" action="{{route("project.update",$project->id)}}" method="POST">
                                     @csrf
+                                    @method("PUT")
                                     <div class="row">
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
@@ -59,35 +60,26 @@
                                                 value="{{$project->done_project}}" name="done_project">
                                             </div>
                                         </div>
-                                        
-                                        <label for="start_project">Data inicial</label>
-                                                <div class="col-md-3 col-12">
+                                        <section class="section">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="card my-2">
                                                         <div class="card-body">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                                    id="flexRadioDefault2" checked>
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    concluido
-                                                                </label>
-                                                            </div>
+                                                            <div><label for="default">Descrição 
+                                                            </label></div>
+                                                            <textarea id="default" name="description"
+                                                            value="{{$project->description}}">
+                                                            
+                                                            </textarea>
                                                         </div>
                                                     </div>
-
-                                                    <div class="col-md-3 col-12">
-                                                        <div class="card-body">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                                    id="flexRadioDefault2" checked>
-                                                                <label class="form-check-label" for="flexRadioDefault2" aria-checked="true">
-                                                                    não consluido
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
                                             </div>
-                                        <div class="col-12 d-flex justify-content-end">
+                                        </section>
+
+                                        </div>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end p-2">
                                             <button type="submit"
                                                 class="btn btn-primary me-1 mb-1">editar</button>
                                             <button type="reset"

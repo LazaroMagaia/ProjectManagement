@@ -59,6 +59,20 @@
                                                     name="done_project" placeholder="conclusão do projecto">
                                             </div>
                                         </div>
+                                        
+                                        <section class="section">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="card my-2">
+                                                        <div class="card-body">
+                                                            <div><label for="default">Descrição </label></div>
+                                                            <textarea id="default" name="description"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
                                         <div class="col-12 d-flex justify-content-end">
                                             <button type="submit"
                                                 class="btn btn-primary me-1 mb-1">criar</button>
@@ -74,6 +88,6 @@
             </div>
         </section>
     </div><!--page content-->
-    </div>
+    </div>  
 
     @include('admin.pages.includes.footer')

@@ -29,6 +29,24 @@
                         </a>
                     </li>
 
+                    <li class="sidebar-item {{ Request::path() == 'admin/friends' ? 'active' : '' }}">
+                        <a href="{{route('friends.home')}}" class='sidebar-link'>
+                            <i class="bi bi-people-fill"></i>
+                            <span>Amigos</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item ">
+                            <form method="POST" action="{{ route('logout') }}" class='sidebar-link'>
+                                @csrf
+                                <button style="border: 0; background-color:transparent;
+                                padding-top:8px; color:#25396f;" type="submit">
+                                <i class="bi bi-box-arrow-right"></i> <span
+                                 style=" position: absolute; margin-top:-4px; color:#25396f;"
+                                 >Sair</span>
+                            </button>
+                            </form>
+                    </li>
                 </ul>
             </div>
             <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>

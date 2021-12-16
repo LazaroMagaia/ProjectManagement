@@ -58,3 +58,49 @@
 {
     color: #fff;
 }
+/****************************SHOW PROJECT PAGE*************************/
+.flex
+{
+    display: flex;
+    justify-content: start;
+}
+
+/****************************INDEX FRIENDS PAGE*************************/
+.form-inline .form-control {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+  }
+.friends-wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.friends-single
+{
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: 20px 0;
+}
+.friends-single img
+{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    padding:2px 0;
+    object-fit: cover;
+}
+.friends-single h3
+{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--black2);
+    cursor: pointer;
+}
+.friends-single p
+{
+    color: var(--black2);
+    cursor: pointer;  
+}
