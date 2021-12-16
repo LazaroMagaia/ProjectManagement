@@ -6,3 +6,5 @@
     write email send code
 }
 4 - php artisan make:mail Remeber --markdown=emails.texte
+
+https://github.com/LazaroMagaia/LaraProjectManagement.git
